@@ -5,7 +5,7 @@ module.exports = {
         .setName('ping')
         .setDescription('Replies with pongs'),
     async execute(interaction) {
-        let lots_of_pongs = 10;
+        let lots_of_pongs = 10; 
         interaction.reply({ content: `${lots_of_pongs} pongs` })
     }
 };
