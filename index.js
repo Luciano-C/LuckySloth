@@ -81,7 +81,10 @@ client.on('interactionCreate', async interaction => {
 // Login to Discord with your client's token
 client.login(TOKEN);
 
-module.exports = {client}
+guild.members.fetch()
+  .then(console.log)
+  .catch(console.error);
+
 
 
 
