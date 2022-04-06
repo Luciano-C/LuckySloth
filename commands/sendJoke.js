@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const {randomFromArray}   = require("../functions/selectRandomFromArray.js")
+const { randomFromArray } = require("../functions/selectRandomFromArray.js")
 const { jokes } = require("../arrays/jokes.js")
 
 module.exports = {
