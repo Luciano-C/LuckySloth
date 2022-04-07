@@ -11,10 +11,14 @@ const TOKEN = process.env['TOKEN'];
 const TEST_GUILD_ID = process.env['TEST_GUILD_ID'];
 
 
-
+const myIntents = [Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.GUILD_MEMBERS];
 // Create a new client instance
 const client = new Client({
-    intents: [Intents.FLAGS.GUILDS]
+    intents: myIntents,
+    partials: ["MESSAGE", "REACTION"],
+    restRequestTimeout: 30000,
+    restTimeOffileSystemet: 750,
+    fetchAllMembers: true
 });
 
 // Loading commands from the commands folder
