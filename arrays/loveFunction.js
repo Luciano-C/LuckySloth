@@ -16,7 +16,7 @@ const love = (lover, target, extra) => {
         `"Hugs are worth more than a thousand words", said ${lover} when embraced ${target}.`,
         `${lover} whispers into ${target}'s ear "I want you".`,
         `${lover} and ${extra} chinese finger cuffed ${target}.`,
-        `${lover} asked ${target} for a strand of their beautiful hair, for ${target} is the most beautiful creature in the land. ${lover} got three.`,
+        `${lover} asked for a strand of ${target}'s beautiful hair, for ${target} is the most beautiful creature in the land. ${lover} got three.`,
         `${lover} put their best outfit to impress ${target}. Unfortunately ${extra} was looking hotter and they went away together. Now, I realize this may not be the love story we wanted to hear but these things happen and are beautiful in a certain way.`,
         `${lover} sang a ballad at ${target}'s balcony. That was some terrible singing but the gesture was appreciated and now they are deeply in love.`,
         `${lover} and ${target} were ready to make sweet love, but some of ${lover}'s ...eeeer... parts.. wouldn't work so they watched some TV instead. Nothing wrong with that, right? I mean we have all been there sometimes, right?`,

@@ -30,7 +30,7 @@ const hit = (hitter, target, extra) => {
         `${hitter} and ${target} played chess. ${hitter} lost and smashed the board on ${target}'s head. After the rage subsided ${hitter} said \`good game\` and politely asked for a rematch.`,
         `${hitter} and ${extra} sacrificed ${target} to the devil. Merry christmas, everybody! :rabbit: :fox: :bear: :deer:`, 
         `${target} slapped ${extra} for making fun of his wife. This is specially chivalrous, since ${target}'s wife has been naughty with ${hitter}.`
-    ]
+    ];
     return randomFromArray(hit_list);
 }
 
