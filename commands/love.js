@@ -62,7 +62,6 @@ module.exports = {
 
                 }
 
-
                 else if (selectedTarget !== null && selectedLover !== null) {
                     if (selectedTarget.bot === true && selectedLover.bot === false) {
                         reply = "Bots can't love, but they do it as a sex machine.";
