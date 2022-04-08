@@ -1,14 +1,13 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { randomFromArray } = require("../functions/selectRandomFromArray.js")
-const { jokes } = require("../arrays/jokes.js")
+const { wisdom } = require("../arrays/wisdom.js")
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('joke')
-        .setDescription('Sends a random joke.'),
+        .setName('wisdom')
+        .setDescription('Shares some wisdom.'),
     async execute(interaction) {
-        let reply = randomFromArray(jokes);
+        let reply = randomFromArray(wisdom);
         interaction.reply({ content: reply })
     }
 };
-

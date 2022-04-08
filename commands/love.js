@@ -6,7 +6,7 @@ const { randomFromArray } = require('../functions/selectRandomFromArray');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('love')
-        .setDescription('Loves a random user')
+        .setDescription('Loves a random user.')
         .addUserOption(option => option.setName('target').setDescription('Select a user to love instead')),
     async execute(interaction) {
         interaction.guild.members.fetch()
