@@ -1,13 +1,13 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { hit } = require("../arrays/hitFunction.js");
+const { love } = require("../arrays/loveFunction.js");
 const { randomFromArray } = require('../functions/selectRandomFromArray');
 
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('hit')
-        .setDescription('Hits a random user')
-        .addUserOption(option => option.setName('target').setDescription('Select a user to hit instead')),
+        .setName('love')
+        .setDescription('Loves a random user')
+        .addUserOption(option => option.setName('target').setDescription('Select a user to love instead')),
     async execute(interaction) {
         interaction.guild.members.fetch()
             .then(response => {
@@ -15,7 +15,7 @@ module.exports = {
                 let possibleTargets = members.filter(x => x.isBot === false).map(x => x.name);
                 
                 const selectedUser = interaction.options.getUser('target');
-                let hitter = interaction.member.displayName;
+                let lover = interaction.member.displayName;
                 let reply = "";
                 let target = "";
                 let extra = "";
@@ -26,26 +26,22 @@ module.exports = {
                     target = randomFromArray(possibleTargets);
                     possibleTargets = possibleTargets.filter(x => x !== target);
                     extra = randomFromArray(possibleTargets);
-                    reply = hit(hitter, target, extra);
+                    reply = love(lover, target, extra);
                 }
 
                 else if (selectedUser.username === interaction.member.displayName.toString()) {
-                    reply = "Why are you hitting yourself? :rolling_eyes:";
+                    reply = "You know, there are more fun ways to love yourself :wink:";
                 }
 
                 else if (selectedUser.bot === true) {
-                    hitter = "LuckySloth";
-                    target = interaction.member.displayName.toString();
-                    possibleTargets = possibleTargets.filter(x => x !== target);
-                    extra = randomFromArray(possibleTargets);
-                    reply = `Hitting bots is not cool.\n${hit(hitter, target, extra)}`;
+                    reply = `Bots may not be able to love, but they do it like a sex machine.`;
                 }
 
                 else {
                     target = selectedUser.username;
                     possibleTargets = possibleTargets.filter(x => x !== target);
                     extra = randomFromArray(possibleTargets);
-                    reply = hit(hitter, target, extra);
+                    reply = love(lover, target, extra);
                 }
 
                 interaction.reply({ content: reply });
@@ -53,4 +49,3 @@ module.exports = {
             .catch(console.error);
     }
 };
-
