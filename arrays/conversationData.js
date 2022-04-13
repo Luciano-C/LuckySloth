@@ -17,8 +17,8 @@ const conversationData = [
     {
         id: "name",
         patterns: ["your name", "you called", "who are you", "do they call you"],
-        responses: ["I'm LuckySloth", "LuckySloth", "Not a Blanket rehatch for sure, I'm someone completely different."],
-        priority: 4.8
+        responses: ["I'm LuckySloth.", "My name is LuckySloth.", "Not a Blanket rehatch for sure, I'm someone completely different."],
+        priority: 8.1
     },
 
     {
