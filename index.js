@@ -42,7 +42,7 @@ function KeepBotAlive(){
     setTimeout(() => {
         console.log("Still Alive");
         KeepBotAlive();
-    }, 60000);
+    }, 30000);
 }
 
 // When the client is ready, this only runs once
