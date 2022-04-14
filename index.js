@@ -38,17 +38,11 @@ for (const file of commandFiles) {
     client.commands.set(command.data.name, command);
 }
 
-function KeepBotAlive(){
-    setTimeout(() => {
-        console.log("Still Alive");
-        KeepBotAlive();
-    }, 30000);
-}
+
 
 // When the client is ready, this only runs once
 client.once('ready', () => {
     console.log('Ready!');
-    KeepBotAlive();
     // Registering the commands in the client
     const CLIENT_ID = client.user.id;
     const rest = new REST({
