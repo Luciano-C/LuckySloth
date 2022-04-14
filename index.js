@@ -4,6 +4,9 @@ const { Routes } = require('discord-api-types/v9');
 // Require the necessary discord.js classes
 const { Client, Intents, Collection } = require('discord.js');
 
+// server.js crea un servidor usando express. Este será monitoreado por uptimerobot
+const { keepAlive } = require("./keepalive/server.js");
+
 // Loading the token from .env file
 const dotenv = require('dotenv');
 dotenv.config();
@@ -85,6 +88,7 @@ client.on('interactionCreate', async interaction => {
 
 
 // Login to Discord with your client's token
+keepAlive();
 client.login(TOKEN);
 
 

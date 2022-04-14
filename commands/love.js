@@ -54,7 +54,7 @@ module.exports = {
                         target = selectedTarget.username;
                         possibleTargets = possibleTargets.filter(x => x !== target);
                         extra = randomFromArray(possibleTargets);
-                        reply = love(lover, target, extra);
+                        reply = lover === target ? "There are more fun ways for people to love themselves :wink:" : love(lover, target, extra);
                     }
                     else {
                         reply = "Bots can't love, but they do it as a sex machine.";
