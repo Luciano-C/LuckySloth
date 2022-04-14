@@ -47,7 +47,7 @@ module.exports = {
                     };
                 }
 
-                else if (selectedTarget !== null && selectedHitter === null && selectedTarget.bot === false) {
+                else if (selectedTarget !== null && selectedHitter === null) {
                     if (selectedTarget.bot === false) {
                         hitter = interaction.member.displayName.toString();
                         target = selectedTarget.username;
