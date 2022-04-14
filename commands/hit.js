@@ -53,7 +53,7 @@ module.exports = {
                         target = selectedTarget.username;
                         possibleTargets = possibleTargets.filter(x => x !== target);
                         extra = randomFromArray(possibleTargets);
-                        reply = hit(hitter, target, extra);
+                        reply = hitter === target ? "Weird to see people hitting themselves :thinking:" : hit(hitter, target, extra);
                     }
                     else {
                         hitter = "LuckySloth";
