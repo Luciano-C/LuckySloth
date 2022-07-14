@@ -7,7 +7,7 @@ Requiere añadir un archivo .env con los siguientes campos:
 TOKEN="Your discord token"
 TEST_GUILD_ID="Your test guild id"
 
-# Links útiles
+## Links útiles
 
 https://daily-dev-tips.com/posts/creating-a-discord-slash-command-bot/
 
