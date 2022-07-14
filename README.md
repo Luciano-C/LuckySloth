@@ -4,7 +4,7 @@ Bot de discord para el juego South Park Phone Destroyer
 ## Funcionamiento
 Requiere añadir un archivo .env con los siguientes campos:
 
-TOKEN="Your discord token"
+TOKEN="Your discord token" <br>
 TEST_GUILD_ID="Your test guild id"
 
 ## Links útiles
